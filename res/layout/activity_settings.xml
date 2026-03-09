@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Configuración"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?android:attr/colorAccent"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuánto tiempo debe durar el pop-up?"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:fontFamily="sans-serif-medium" />
+            
+        <RadioGroup
+            android:id="@+id/rg_tiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rb_3s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rápido (3 segundos)" android:textColor="?android:attr/textColorSecondary"/>
+            <RadioButton android:id="@+id/rb_7s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Normal (7 segundos)" android:textColor="?android:attr/textColorSecondary"/>
+            <RadioButton android:id="@+id/rb_inf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hasta que yo lo cierre (Infinito)" android:textColor="?android:attr/textColorSecondary"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensaje debajo del nombre"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:fontFamily="sans-serif-medium" />
+            
+        <EditText
+            android:id="@+id/et_subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Ej. Conectado al Moto G05"
+            android:padding="16dp"
+            android:background="@drawable/bg_icon_card"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto del botón de cierre"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:fontFamily="sans-serif-medium" />
+            
+        <EditText
+            android:id="@+id/et_boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Ej. Listo"
+            android:padding="16dp"
+            android:background="@drawable/bg_icon_card"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        
+        <Button
+            android:id="@+id/btn_permisos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Gestionar Permisos del Sistema"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/colorAccent"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_guardar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:text="Guardar y Volver"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AnyPair" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AnyPair"
+                android:textSize="32sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?android:attr/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_settings"
+                android:tint="?android:attr/textColorPrimary"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personaliza cómo se verá el pop-up al conectar tu dispositivo."
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_icon_card"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:elevation="2dp"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/btn_seleccionar_imagen"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <ImageView
+                    android:id="@+id/img_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/genericbuds" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tocar para cambiar"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <EditText
+                android:id="@+id/et_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:hint="Ej. Mis Audífonos"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:background="@null"
+                android:textColor="?android:attr/colorAccent"
+                android:fontFamily="sans-serif-medium"/>
+                
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/colorAccent"
+                android:alpha="0.3" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            android:text="Ver Animación"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button" />
+    </LinearLayout>
+</ScrollView>

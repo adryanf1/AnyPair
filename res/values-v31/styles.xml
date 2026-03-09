@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AnyPair" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:colorAccent">@android:color/system_accent1_500</item>
+        <item name="android:navigationBarColor">@android:color/system_neutral1_900</item>
+    </style>
+</resources>
