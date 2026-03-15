@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="?android:attr/colorBackground">
 
     <LinearLayout
@@ -10,32 +11,15 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="24dp">
-            
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="AnyPair"
-                android:textSize="32sp"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="?android:attr/colorAccent" />
-
-            <ImageButton
-                android:id="@+id/btn_settings"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_settings"
-                android:tint="?android:attr/textColorPrimary"
-                android:scaleType="centerInside" />
-        </LinearLayout>
+            android:text="AnyPair"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?android:attr/colorAccent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,14 +56,6 @@
                     android:src="@drawable/genericbuds" />
             </FrameLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tocar para cambiar"
-                android:textSize="14sp"
-                android:layout_marginTop="12dp"
-                android:textColor="?android:attr/textColorSecondary" />
-
             <EditText
                 android:id="@+id/et_nombre"
                 android:layout_width="match_parent"
@@ -92,20 +68,25 @@
                 android:background="@null"
                 android:textColor="?android:attr/colorAccent"
                 android:fontFamily="sans-serif-medium"/>
-                
-            <View
-                android:layout_width="150dp"
-                android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
-                android:background="?android:attr/colorAccent"
-                android:alpha="0.3" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:text="Ajustes del Pop-up"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?android:attr/colorAccent"
+            android:background="@drawable/bg_icon_card" />
 
         <Button
             android:id="@+id/btn_test"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"
             android:text="Ver Animación"
             android:textAllCaps="false"

@@ -39,8 +39,9 @@ public final class R {
     public static final int rb_7s=0x7f02000f;
     public static final int rb_inf=0x7f020010;
     public static final int rg_tiempo=0x7f020011;
-    public static final int tv_subtitle=0x7f020012;
-    public static final int tv_title=0x7f020013;
+    public static final int sw_blur=0x7f020012;
+    public static final int tv_subtitle=0x7f020013;
+    public static final int tv_title=0x7f020014;
   }
   public static final class layout {
     public static final int activity_main=0x7f030000;

@@ -1,5 +1,4 @@
 package com.user.anypair;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -19,26 +18,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getActionBar() != null) getActionBar().hide();
         setContentView(R.layout.activity_main);
-
         prefs = getSharedPreferences("AnyPairConfig", Context.MODE_PRIVATE);
         imgPreview = (ImageView) findViewById(R.id.img_preview);
         etNombre = (EditText) findViewById(R.id.et_nombre);
-
         etNombre.setText(prefs.getString("nombre_dispositivo", "GenericBuds"));
         String savedUri = prefs.getString("imagen_uri", "");
         if (!savedUri.isEmpty()) {
             try { imgPreview.setImageURI(Uri.parse(savedUri)); } catch (Exception e) {}
         }
-
-        // Asignamos los listeners limpios
         findViewById(R.id.btn_seleccionar_imagen).setOnClickListener(this);
         findViewById(R.id.btn_test).setOnClickListener(this);
-        
-        View btnSettings = findViewById(R.id.btn_settings);
-        if (btnSettings != null) {
-            btnSettings.setOnClickListener(this);
-        }
+        findViewById(R.id.btn_settings).setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +45,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             prefs.edit().putString("nombre_dispositivo", etNombre.getText().toString()).apply();
             Intent i = new Intent(this, BtleReceiver.class);
             i.setAction("com.user.anypair.TEST_POPUP");
+            // Simulamos datos de batería para la prueba
+            i.putExtra("android.bluetooth.device.extra.BATTERY_LEVEL", 85);
+            i.putExtra("com.google.android.gms.nearby.discovery.extra.LEFT_BATTERY", 90);
+            i.putExtra("com.google.android.gms.nearby.discovery.extra.RIGHT_BATTERY", 45);
             sendBroadcast(i);
         } else if (id == R.id.btn_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
