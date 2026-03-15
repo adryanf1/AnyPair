@@ -5,7 +5,7 @@
 <img width="128" height="128" alt="AnyPair Logo" src="https://github.com/user-attachments/assets/06fc2d5b-1036-4d33-8ef9-26b18303e8a7" />
 
 
-
+*Esta app y repo es gestionado mayormente por gemini*
 
 AnyPair es una utilidad ligera y personalizable que detecta cuando tus audífonos o dispositivos Bluetooth se conectan a tu teléfono y despliega una animación flotante elegante (Pop-up) en la parte inferior de la pantalla.
 
